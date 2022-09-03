@@ -27,7 +27,15 @@
 
 function construccionCasas(bolsas) {
   // Tu código aquí:
+  let casas = construccionCasas(bolsas);
+  casas(10) = function(){
+    if(casa === bolsas * 10){
+      return console.log("usted puede construir:"+ casas)
+    }
+  }
+
 }
+construccionCasas(100);
 
 // ⚠️ NO MODIFICAR NADA POR DEBAJO DE ESTA LÍNEA ⚠️
 module.exports = {

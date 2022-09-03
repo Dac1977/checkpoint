@@ -23,9 +23,24 @@
 
 const calcularImpuestos = (factura, i = 0, acc = 0) => {
   // Tu código aquí:
+  let total = [];
+  if(Array.isArray(factura)){
+    if(factura.length){
+      i++;
+      
+      total = total + factura[i] + calcularImpuestos(factura[i], i = 0, acc = 0 );
+      acc += total ;
+      
+      //return acc;
+    }else{
+    return false;
+  }
+  
+}else return 'Error';
+return acc;
 }
-
-
+const factura = [1,2,3,4,5];
+calcularImpuestos(factura);
 // ⚠️ NO MODIFICAR NADA POR DEBAJO DE ESTA LÍNEA ⚠️
 module.exports = {
   calcularImpuestos

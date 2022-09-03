@@ -25,8 +25,11 @@
 
 function casasPorAño(n) {
   // Tu código aquí:
+  if(n < 0) return false;
+  if(n === 1) return 30;
+  if(n > 1) return 30 + casasPorAño(n-1);
 }
-
+//casasPorAño(2);
 // ⚠️ NO MODIFICAR NADA POR DEBAJO DE ESTA LÍNEA ⚠️
 module.exports = {
   casasPorAño,
